@@ -31,7 +31,7 @@ const heroSlides = [
   },
   {
     src: '/pigeon-nets-balcony-net-city-view.webp',
-    service: 'Pigeon Nets',
+    service: 'Bird Safety Nets',
     slug: 'pigeon-nets',
     heading: ['The droppings stop.', 'The nesting stops.', "The view doesn't."],
     headingHighlight: 0,

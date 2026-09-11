@@ -34,20 +34,18 @@
     "/Invisible-Grill-Staircase4.webp",
     "/safety-nets-balcony-net-hillside-view.webp"
   ],
-  "pigeon-nets": [
-    "/gallery-new-6.webp",
-    "/invisible-grills-modern-balcony-city-skyline.webp",
-    "/modern-balcony-invisible-grill.webp",
-    "/pigeon-nets-ac-outdoor-unit-protection-net.webp",
-    "/pigeon-nets-balcony-installation-greenery-view.webp",
-    "/pigeon-nets-balcony-net-city-view.webp",
-    "/pigeon-nets-bird-blocked-by-window-net.webp",
-    "/pigeon-nets-building-window-nets-elevation.webp",
-    "/pigeon-nets-pigeons-on-balcony-railing.webp",
-    "/apartment-pigeon-net-balcony.webp",
-    "/balcony-pigeon-net-installation.webp",
-    "/balcony-pigeon-safety-net.webp",
-    "/corridor-pigeon-net-installation.webp"
+  "cloth-hangers": [
+    "/gallery-new-1.webp",
+    "/gallery-new-3.webp",
+    "/gallery-new-8.webp",
+    "/gallery-new-9.webp",
+    "/gallery-new-10.webp",
+    "/gallery-new-11.webp",
+    "/cloth-hangers-balcony-ceiling-hanger-near-ac-unit.webp",
+    "/cloth-hangers-balcony-hanger-with-clothes-drying.webp",
+    "/cloth-hangers-ceiling-hanger-narrow-balcony.webp",
+    "/cloth-hangers-ceiling-pulley-hanger-white-balcony.webp",
+    "/cloth-hangers-wall-mounted-drying-rack-window.webp"
   ],
   "safety-nets": [
     "/invisible-grills-apartment-balcony-high-rise-view.webp",
@@ -65,54 +63,19 @@
     "/safety-nets-corridor-net-with-installer.webp",
     "/balcony-child-safety-net.webp"
   ],
-  "cloth-hangers": [
-    "/gallery-new-1.webp",
-    "/gallery-new-3.webp",
-    "/gallery-new-8.webp",
-    "/gallery-new-9.webp",
-    "/gallery-new-10.webp",
-    "/gallery-new-11.webp",
-    "/cloth-hangers-balcony-ceiling-hanger-near-ac-unit.webp",
-    "/cloth-hangers-balcony-hanger-with-clothes-drying.webp",
-    "/cloth-hangers-ceiling-hanger-narrow-balcony.webp",
-    "/cloth-hangers-ceiling-pulley-hanger-white-balcony.webp",
-    "/cloth-hangers-wall-mounted-drying-rack-window.webp"
-  ],
-  "sports-nets": [
-    "/sports-safety-net-installation.webp",
-    "/sports-nets-cricket-practice-cage-outdoor.webp",
-    "/sports-nets-cricket-practice-ground-cage.webp",
-    "/sports-nets-cricket-practice-net-batsman.webp",
-    "/sports-nets-football-turf-boundary-net.webp",
-    "/sports-nets-indoor-cricket-practice-session.webp",
-    "/sports-nets-indoor-turf-court-enclosure.webp",
-    "/sports-nets-outdoor-cricket-practice-cage.webp"
-  ],
-  "duct-area-nets": [
-    "/pigeon-nets-installer-on-building-facade.webp",
-    "/duct-area-nets-bird-proofing-between-buildings.webp",
-    "/duct-area-nets-green-net-between-buildings.webp",
-    "/duct-area-nets-green-net-over-shaft-top-view.webp",
-    "/duct-area-nets-green-net-shaft-enclosure.webp",
-    "/duct-area-nets-green-net-shaft-multi-floor.webp",
-    "/duct-area-nets-rope-access-installation-high-rise.webp",
-    "/duct-area-nets-wall-shaft-net-closeup.webp",
-    "/duct-area-nets-white-net-box-over-shaft.webp",
-    "/duct-net-installation-2.webp",
-    "/duct-net-installation-3.webp",
-    "/duct-net-installation-4.webp",
-    "/construction-nets-green-net-over-building-structure.webp"
-  ],
-  "staircase-nets": [
-    "/gallery-new-2.webp",
-    "/gallery-new-4.webp",
-    "/gallery-new-5.webp",
-    "/gallery-new-7.webp"
-  ],
-  "construction-nets": [
-    "/construction-nets-industrial-roof-net.webp",
-    "/construction-nets-industrial-shed-roof-net.webp",
-    "/construction-nets-scaffolding-green-net-facade.webp",
-    "/construction-nets-warehouse-open-side-net.webp"
+  "pigeon-nets": [
+    "/pigeon-nets-balcony-net-city-view.webp",
+    "/gallery-new-6.webp",
+    "/pigeon-nets-ac-outdoor-unit-protection-net.webp",
+    "/pigeon-nets-balcony-installation-greenery-view.webp",
+    "/pigeon-nets-bird-blocked-by-window-net.webp",
+    "/pigeon-nets-building-window-nets-elevation.webp",
+    "/pigeon-nets-pigeons-on-balcony-railing.webp",
+    "/apartment-pigeon-net-balcony.webp",
+    "/balcony-pigeon-net-installation.webp",
+    "/balcony-pigeon-safety-net.webp",
+    "/corridor-pigeon-net-installation.webp",
+    "/invisible-grills-modern-balcony-city-skyline.webp",
+    "/modern-balcony-invisible-grill.webp"
   ]
 }

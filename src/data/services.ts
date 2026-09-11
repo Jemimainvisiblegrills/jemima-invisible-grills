@@ -3,10 +3,6 @@ import {
   Bird,
   ShieldCheck,
   Shirt,
-  Target,
-  Wind,
-  ArrowUpDown,
-  HardHat,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -14,7 +10,7 @@ export type Service = {
   slug: string
   name: string
   shortName: string
-  category: 'Invisible Grills' | 'Safety Nets' | 'Pigeon Nets' | 'Cloth Hangers' | 'Sports Nets' | 'Duct Area Nets' | 'Staircase Nets' | 'Construction Nets'
+  category: 'Invisible Grills' | 'Safety Nets' | 'Bird Safety Nets' | 'Cloth Hangers'
   metaTitle: string
   metaDescription: string
   icon: LucideIcon
@@ -112,7 +108,7 @@ export const services: Service[] = [
         a: 'A standard 8–10 ft balcony opening takes 3–4 hours including tensioning and cleanup.',
       },
     ],
-    relatedSlugs: ['pigeon-nets', 'safety-nets', 'sports-nets'],
+    relatedSlugs: ['pigeon-nets', 'safety-nets'],
     gallery: [
       { src: '/invisible-grills-apartment-balcony-night.webp', alt: 'invisible grills apartment balcony night' },
       { src: '/invisible-grills-apartment-window-exterior.webp', alt: 'invisible grills apartment window exterior' },
@@ -153,14 +149,14 @@ export const services: Service[] = [
   // ── 2. Cloth Hangers ─────────────────────────────────────────────────────
   {
     slug: 'cloth-hangers',
-    name: 'Pigeon Nets',
-    shortName: 'Pigeon Nets',
-    category: 'Pigeon Nets',
-    metaTitle: 'Pigeon Net Installation in Chennai | Jemima',
+    name: 'Cloth Hangers',
+    shortName: 'Cloth Hangers',
+    category: 'Cloth Hangers',
+    metaTitle: 'Balcony Cloth Hanger Installation in Chennai | Jemima',
     metaDescription:
-      'Stop pigeons nesting on your balcony, duct or terrace. UV-stable HDPE nets, invisible from inside, no drilling into the slab. Free survey — call +91 78100 40329.',
-    icon: Bird,
-    heroTagline: "The droppings stop. The nesting stops. The view doesn't.",
+      'Ceiling-mounted and wall-mounted cloth drying hangers for balconies and utility areas. Stainless steel rods, pulley systems. Free survey — +91 78100 40329.',
+    icon: Shirt,
+    heroTagline: 'Dry clothes without losing your balcony.',,
     intro: [
       "Pigeons on a balcony aren't just a mess — droppings carry fungal spores that are a genuine respiratory risk, and once a pair nests in a corner they will keep returning to the same spot for years. A pigeon net is the direct fix: a UV-stabilised HDPE mesh fitted across the balcony opening so birds can't land or nest, without changing how the balcony looks or feels from inside.",
       "We use a fine, high-density knotted mesh — 1.5 inch spacing — small enough that pigeons can't squeeze through but see-through enough that from your sofa you barely notice it's there. The net is fixed to the wall and ceiling edge with stainless steel hooks, not tacked to the railing, so there's no loose flapping in Chennai's pre-monsoon winds.",
@@ -232,21 +228,19 @@ export const services: Service[] = [
         a: "Yes, the mesh and hook spacing are rated well above normal wind load; we've fitted these across coastal-facing towers with no issues.",
       },
     ],
-    relatedSlugs: ['safety-nets', 'invisible-grills', 'sports-nets'],
+    relatedSlugs: ['safety-nets', 'invisible-grills'],
     gallery: [
-      { src: '/gallery-new-6.webp', alt: 'gallery new 6' },
-      { src: '/invisible-grills-modern-balcony-city-skyline.webp', alt: 'invisible grills modern balcony city skyline' },
-      { src: '/modern-balcony-invisible-grill.webp', alt: 'modern balcony invisible grill' },
-      { src: '/pigeon-nets-ac-outdoor-unit-protection-net.webp', alt: 'pigeon nets ac outdoor unit protection net' },
-      { src: '/pigeon-nets-balcony-installation-greenery-view.webp', alt: 'pigeon nets balcony installation greenery view' },
-      { src: '/pigeon-nets-balcony-net-city-view.webp', alt: 'pigeon nets balcony net city view' },
-      { src: '/pigeon-nets-bird-blocked-by-window-net.webp', alt: 'pigeon nets bird blocked by window net' },
-      { src: '/pigeon-nets-building-window-nets-elevation.webp', alt: 'pigeon nets building window nets elevation' },
-      { src: '/pigeon-nets-pigeons-on-balcony-railing.webp', alt: 'pigeon nets pigeons on balcony railing' },
-      { src: '/apartment-pigeon-net-balcony.webp', alt: 'apartment pigeon net balcony' },
-      { src: '/balcony-pigeon-net-installation.webp', alt: 'balcony pigeon net installation' },
-      { src: '/balcony-pigeon-safety-net.webp', alt: 'balcony pigeon safety net' },
-      { src: '/corridor-pigeon-net-installation.webp', alt: 'corridor pigeon net installation' },
+      { src: '/gallery-new-1.webp', alt: 'gallery new 1' },
+      { src: '/gallery-new-3.webp', alt: 'gallery new 3' },
+      { src: '/gallery-new-8.webp', alt: 'gallery new 8' },
+      { src: '/gallery-new-9.webp', alt: 'gallery new 9' },
+      { src: '/gallery-new-10.webp', alt: 'gallery new 10' },
+      { src: '/gallery-new-11.webp', alt: 'gallery new 11' },
+      { src: '/cloth-hangers-balcony-ceiling-hanger-near-ac-unit.webp', alt: 'cloth hangers balcony ceiling hanger near ac unit' },
+      { src: '/cloth-hangers-balcony-hanger-with-clothes-drying.webp', alt: 'cloth hangers balcony hanger with clothes drying' },
+      { src: '/cloth-hangers-ceiling-hanger-narrow-balcony.webp', alt: 'cloth hangers ceiling hanger narrow balcony' },
+      { src: '/cloth-hangers-ceiling-pulley-hanger-white-balcony.webp', alt: 'cloth hangers ceiling pulley hanger white balcony' },
+      { src: '/cloth-hangers-wall-mounted-drying-rack-window.webp', alt: 'cloth hangers wall mounted drying rack window' },
     ],
   },
 
@@ -351,17 +345,17 @@ export const services: Service[] = [
     ],
   },
 
-  // ── 4. Pigeon Nets ───────────────────────────────────────────────────────
+  // ── 4. Bird Safety Nets ──────────────────────────────────────────────────
   {
     slug: 'pigeon-nets',
-    name: 'Cloth Hangers',
-    shortName: 'Cloth Hangers',
-    category: 'Cloth Hangers',
-    metaTitle: 'Balcony Cloth Hanger Installation in Chennai | Jemima',
+    name: 'Bird Safety Nets',
+    shortName: 'Bird Safety Nets',
+    category: 'Bird Safety Nets',
+    metaTitle: 'Bird Safety Nets Installation in Chennai | Jemima',
     metaDescription:
-      'Ceiling-mounted and wall-mounted cloth drying hangers for balconies and utility areas. Stainless steel rods, pulley systems. Free survey — +91 78100 40329.',
-    icon: Shirt,
-    heroTagline: 'Dry clothes without losing your balcony.',
+      'Stop pigeons and birds from nesting on your balcony. UV-stable HDPE nets, free survey — call +91 78100 40329.',
+    icon: Bird,
+    heroTagline: 'Keep birds away. Keep your balcony clean.',,
     intro: [
       "A ceiling-mounted cloth hanger keeps your drying rods off the floor and out of the way, turning a cramped balcony into a usable space again. We install stainless steel rod systems — fixed or pulley-operated — that mount to the ceiling or wall of your balcony or utility area, rated to hold a full load of wet laundry without sagging.",
       "This is one of the most practical additions to any Chennai apartment balcony, especially in flats where the balcony doubles as the only drying space. We fit these alongside our grill and net work so everything is done in one visit — no separate contractor needed.",
@@ -438,400 +432,21 @@ export const services: Service[] = [
         a: 'Not with SS 316 grade — the same steel used in marine fittings. Painted MS rods rust; these do not.',
       },
     ],
-    relatedSlugs: ['invisible-grills', 'safety-nets', 'pigeon-nets'],
+    relatedSlugs: ['safety-nets', 'invisible-grills'],
     gallery: [
-      { src: '/gallery-new-1.webp', alt: 'gallery new 1' },
-      { src: '/gallery-new-3.webp', alt: 'gallery new 3' },
-      { src: '/gallery-new-8.webp', alt: 'gallery new 8' },
-      { src: '/gallery-new-9.webp', alt: 'gallery new 9' },
-      { src: '/gallery-new-10.webp', alt: 'gallery new 10' },
-      { src: '/gallery-new-11.webp', alt: 'gallery new 11' },
-      { src: '/cloth-hangers-balcony-ceiling-hanger-near-ac-unit.webp', alt: 'cloth hangers balcony ceiling hanger near ac unit' },
-      { src: '/cloth-hangers-balcony-hanger-with-clothes-drying.webp', alt: 'cloth hangers balcony hanger with clothes drying' },
-      { src: '/cloth-hangers-ceiling-hanger-narrow-balcony.webp', alt: 'cloth hangers ceiling hanger narrow balcony' },
-      { src: '/cloth-hangers-ceiling-pulley-hanger-white-balcony.webp', alt: 'cloth hangers ceiling pulley hanger white balcony' },
-      { src: '/cloth-hangers-wall-mounted-drying-rack-window.webp', alt: 'cloth hangers wall mounted drying rack window' },
-    ],
-  },
-
-  // ── 5. Sports Nets ───────────────────────────────────────────────────────
-  {
-    slug: 'sports-nets',
-    name: 'Sports Nets',
-    shortName: 'Sports Nets',
-    category: 'Sports Nets',
-    metaTitle: 'Sports Nets Installation — Cricket, Football & More | Chennai',
-    metaDescription:
-      'Heavy-duty practice nets for cricket, football and multi-sport use. GI pole frames, ball-stopping mesh. Free site visit — call +91 78100 40329.',
-    icon: Target,
-    heroTagline: 'Built to take a hard-hit ball, evening after evening, for years.',
-    intro: [
-      "A sports net gets hit harder and more often than any safety net we install — this is a structural sports installation, not a safety barrier, and it's priced and specified differently. We fit heavy-duty braided HDPE netting on a GI pole frame, sized to the pitch length and height the client needs, for housing society grounds, school playgrounds and sports academies.",
-      "Mesh here is chosen for ball-stopping strength — 1–2 inch spacing in a heavier braided twine that holds up to a cricket ball at practice pace over years of daily use. Pole frames are GI pipe, set in concrete footings, sized to the site's wind exposure and net height (typically 10–12 ft). We also fit football goal nets, multi-sport enclosures and terrace ball-stop nets.",
-    ],
-    bestFor: [
-      'Housing societies with open ground wanting a permanent practice net setup',
-      'Schools and colleges with a cricket or football coaching program',
-      'Sports academies needing multiple practice lanes',
-      'Terraces or open plots used informally for practice that need ball containment',
-    ],
-    materials: [
-      { label: 'Net material', value: 'Braided HDPE, 1″–2″ spacing, heavy-duty ball-stopping weave' },
-      { label: 'Pole frame', value: 'GI pipe, set in concrete footings, height 10–12 ft standard' },
-      { label: 'Side/back coverage', value: 'Full enclosure or single-side, per site requirement' },
-      { label: 'Border rope', value: 'Reinforced edge rope stitched to withstand repeated ball impact' },
-      { label: 'Warranty', value: '3 years on net material, 5 years on pole frame, 1 year on installation' },
-    ],
-    benefits: [
-      {
-        title: 'Specified for repeated hard impact',
-        body: 'Braided twine and reinforced edge rope are chosen for daily ball strikes over years, not occasional light contact.',
-      },
-      {
-        title: 'Concrete-set pole frame',
-        body: 'GI poles are set in concrete footings rather than surface-mounted, so the frame stays rigid under repeated impact and wind.',
-      },
-      {
-        title: 'Sized to your ground, not a fixed kit',
-        body: 'Single lane, multi-lane, terrace or open-plot layouts are all surveyed and fitted to the actual space available.',
-      },
-      {
-        title: 'One point of contact for society-scale jobs',
-        body: 'For societies and schools ordering multiple lanes, we quote and install the full layout as one job.',
-      },
-    ],
-    process: [
-      {
-        step: 'Site survey',
-        body: 'We measure the ground, check for overhead obstructions and confirm how many lanes fit the available space.',
-      },
-      {
-        step: 'Quote same day',
-        body: 'Priced per lane, covering poles, footings, and netting as one line item per lane.',
-      },
-      {
-        step: 'Installation',
-        body: 'Pole footings are dug and set first and left to cure before netting is fitted and tensioned — larger jobs scheduled over several days.',
-      },
-      {
-        step: 'Warranty & aftercare',
-        body: 'We recommend a pre-season tension check; net rope and pole joints are covered under warranty against normal wear.',
-      },
-    ],
-    faqs: [
-      {
-        q: 'How long do the poles take to set before netting can go up?',
-        a: 'Concrete footings typically need 3–4 days to cure before we load-test and fit the netting.',
-      },
-      {
-        q: 'Can this be fitted on a terrace instead of open ground?',
-        a: 'Yes, provided the terrace can support pole footings or a suitable base-mounted frame — we confirm this during survey.',
-      },
-      {
-        q: 'What net height do you recommend?',
-        a: '10–12 ft is standard for practice nets and stops the ball reliably for most playing levels.',
-      },
-      {
-        q: 'Do you install for schools and academies, not just housing societies?',
-        a: 'Yes — schools, colleges and academies are a regular part of this work, often ordering multiple lanes at once.',
-      },
-      {
-        q: 'Does the net need to be taken down before monsoon?',
-        a: 'No, the netting and frame are built to stay up year-round; we just recommend a tension check before the season.',
-      },
-    ],
-    relatedSlugs: ['safety-nets', 'pigeon-nets', 'invisible-grills'],
-    gallery: [
-      { src: '/sports-safety-net-installation.webp', alt: 'sports safety net installation' },
-      { src: '/sports-nets-cricket-practice-cage-outdoor.webp', alt: 'sports nets cricket practice cage outdoor' },
-      { src: '/sports-nets-cricket-practice-ground-cage.webp', alt: 'sports nets cricket practice ground cage' },
-      { src: '/sports-nets-cricket-practice-net-batsman.webp', alt: 'sports nets cricket practice net batsman' },
-      { src: '/sports-nets-football-turf-boundary-net.webp', alt: 'sports nets football turf boundary net' },
-      { src: '/sports-nets-indoor-cricket-practice-session.webp', alt: 'sports nets indoor cricket practice session' },
-      { src: '/sports-nets-indoor-turf-court-enclosure.webp', alt: 'sports nets indoor turf court enclosure' },
-      { src: '/sports-nets-outdoor-cricket-practice-cage.webp', alt: 'sports nets outdoor cricket practice cage' },
-    ],
-  },
-
-  // ── 6. Duct Area Nets ────────────────────────────────────────────────────
-  {
-    slug: 'duct-area-nets',
-    name: 'Duct Area Nets',
-    shortName: 'Duct Area Nets',
-    category: 'Duct Area Nets',
-    metaTitle: 'Duct Area Net Installation | Chennai Apartments | Jemima',
-    metaDescription:
-      'Rope-access netting for apartment duct and utility shafts where pigeons nest. Safe access, no balcony disruption. Free survey — +91 78100 40329.',
-    icon: Wind,
-    heroTagline: 'The shaft nobody can reach is exactly where they nest.',
-    intro: [
-      "Duct areas — the narrow utility shafts running down the side of apartment towers for plumbing and ventilation — are a pigeon's ideal nesting spot precisely because residents can't reach them. No balcony access, no ledge to stand on, so the mess and nesting material build up for years until someone complains about the smell or a blockage.",
-      "We fit duct openings using rope access or scaffolding depending on the building's height and shaft width, covering every opening from ground floor to terrace in one pass so pigeons can't simply relocate one floor up. This is typically arranged through the housing society or facility manager.",
-    ],
-    bestFor: [
-      'Housing societies with pigeon nesting or blockages inside duct/utility shafts',
-      'Buildings where residents have complained about smell or noise from duct areas',
-      'Facility managers doing a building-wide bird-proofing pass',
-      'Ducts where nesting material has previously caused a drain blockage',
-    ],
-    materials: [
-      { label: 'Mesh material', value: 'UV-stabilised HDPE, 1.5″ spacing, higher-tension weave' },
-      { label: 'Access method', value: 'Rope access or scaffolding, per building height/shaft width' },
-      { label: 'Fixing', value: 'SS anchors into shaft wall at each floor opening' },
-      { label: 'Coverage', value: 'Every duct opening floor to floor in a single continuous pass' },
-      { label: 'Warranty', value: '5 years against UV degradation, 1 year on installation' },
-    ],
-    benefits: [
-      {
-        title: 'Reaches openings balconies never could',
-        body: 'Rope access and scaffolding get our team to shaft openings with no ledge or balcony access — the actual problem area.',
-      },
-      {
-        title: 'One pass covers the whole shaft',
-        body: "We net every floor's opening in the same visit so birds can't simply move up or down one level.",
-      },
-      {
-        title: 'Access stays serviceable',
-        body: 'Net panels are fitted so plumbers and maintenance staff can still reach pipework — nothing is permanently sealed.',
-      },
-      {
-        title: 'Removes years of built-up nesting material',
-        body: 'We clear existing nests and debris as part of the job, which often resolves smell complaints and slow drains.',
-      },
-    ],
-    process: [
-      {
-        step: 'Site survey',
-        body: "We inspect the shaft from top to bottom, note the access method needed and flag any existing blockage.",
-      },
-      {
-        step: 'Quote to the society/FM',
-        body: 'One quote covering the full shaft height, itemised by floor count and access method.',
-      },
-      {
-        step: 'Installation',
-        body: 'Trained technicians net every opening floor to floor in a single scheduled pass.',
-      },
-      {
-        step: 'Warranty & aftercare',
-        body: 'Annual inspection visits can be arranged with the society to check for wear before the next monsoon.',
-      },
-    ],
-    faqs: [
-      {
-        q: 'Who normally arranges this — the flat owner or the society?',
-        a: 'Almost always the housing society or facility manager, since the duct shaft is common property.',
-      },
-      {
-        q: 'Will this block plumber access to the shaft?',
-        a: 'No — panels are fitted to stay serviceable so maintenance staff can still reach pipework.',
-      },
-      {
-        q: 'How long does a full building shaft take?',
-        a: 'A typical 12–15 floor tower shaft takes 2–3 days for a full pass.',
-      },
-      {
-        q: 'Does netting the duct reduce bad smell?',
-        a: 'Often yes — most of the smell comes from accumulated droppings and nesting material, which we clear during installation.',
-      },
-    ],
-    relatedSlugs: ['pigeon-nets', 'safety-nets', 'construction-nets'],
-    gallery: [
-      { src: '/pigeon-nets-installer-on-building-facade.webp', alt: 'pigeon nets installer on building facade' },
-      { src: '/duct-area-nets-bird-proofing-between-buildings.webp', alt: 'duct area nets bird proofing between buildings' },
-      { src: '/duct-area-nets-green-net-between-buildings.webp', alt: 'duct area nets green net between buildings' },
-      { src: '/duct-area-nets-green-net-over-shaft-top-view.webp', alt: 'duct area nets green net over shaft top view' },
-      { src: '/duct-area-nets-green-net-shaft-enclosure.webp', alt: 'duct area nets green net shaft enclosure' },
-      { src: '/duct-area-nets-green-net-shaft-multi-floor.webp', alt: 'duct area nets green net shaft multi floor' },
-      { src: '/duct-area-nets-rope-access-installation-high-rise.webp', alt: 'duct area nets rope access installation high rise' },
-      { src: '/duct-area-nets-wall-shaft-net-closeup.webp', alt: 'duct area nets wall shaft net closeup' },
-      { src: '/duct-area-nets-white-net-box-over-shaft.webp', alt: 'duct area nets white net box over shaft' },
-      { src: '/duct-net-installation-2.webp', alt: 'duct net installation 2' },
-      { src: '/duct-net-installation-3.webp', alt: 'duct net installation 3' },
-      { src: '/duct-net-installation-4.webp', alt: 'duct net installation 4' },
-      { src: '/construction-nets-green-net-over-building-structure.webp', alt: 'construction nets green net over building structure' },
-    ],
-  },
-
-  // ── 7. Staircase Nets ────────────────────────────────────────────────────
-  {
-    slug: 'staircase-nets',
-    name: 'Staircase Safety Nets',
-    shortName: 'Staircase Nets',
-    category: 'Staircase Nets',
-    metaTitle: 'Staircase Safety Nets for Apartments & Villas | Chennai',
-    metaDescription:
-      'Safety nets for open staircases, duplex landings and stairwell gaps. Child-safe, no-drill options available. Free survey — +91 78100 40329.',
-    icon: ArrowUpDown,
-    heroTagline: 'The gap between the banister rails is the one nobody thinks to close.',
-    intro: [
-      "Open staircases in duplexes, villas and apartment common areas have gaps between banister rails that are wide enough for a small child to fall through or get a limb wedged. A staircase safety net is a soft nylon or HDPE mesh fitted along the full length of the banister, closing every gap without blocking the view up or down the stairs.",
-      "We also fit staircase nets in apartment building common areas — the open stairwell shaft between floors where objects (and occasionally children) can fall several floors. The same clip-hook, no-drill fixing used in our balcony nets works on most staircase railings, making this a landlord-friendly option for rented properties.",
-    ],
-    bestFor: [
-      'Duplex homes and villas with open staircases and young children',
-      'Apartment common stairwells where the shaft is open between floors',
-      'Rented properties where drilling into the banister is not allowed',
-      'Elderly family members who need a visual and physical barrier on open stairs',
-    ],
-    materials: [
-      { label: 'Mesh material', value: 'Soft nylon or HDPE, 2″ spacing, smooth finish' },
-      { label: 'Fixing', value: 'Clip hooks on banister rails (no-drill) or SS anchors into wall' },
-      { label: 'Coverage', value: 'Full banister length, floor to ceiling on open stairwells' },
-      { label: 'Colour', value: 'White, black or transparent to match staircase finish' },
-      { label: 'Warranty', value: '3 years on net material, 1 year on installation' },
-    ],
-    benefits: [
-      {
-        title: 'Closes the exact gap children use',
-        body: '2-inch mesh spacing is tight enough that a small child cannot push through or get a limb wedged between banister rails.',
-      },
-      {
-        title: 'No-drill option for rented homes',
-        body: 'Clip-hook fixing attaches to the banister without drilling — approved by most landlords and removable when you move.',
-      },
-      {
-        title: 'Works on curved and spiral staircases',
-        body: 'Net panels are cut and fitted to the exact shape of your staircase — straight, curved or spiral.',
-      },
-      {
-        title: 'Covers common stairwells too',
-        body: 'Apartment building stairwells with open shafts between floors are a common request — we cover the full height in one visit.',
-      },
-    ],
-    process: [
-      {
-        step: 'Site survey',
-        body: 'We measure the banister length, check rail spacing and confirm whether clip-hook or anchor fixing suits your staircase.',
-      },
-      {
-        step: 'Quote same day',
-        body: 'Priced per running metre of banister, with fixing type shown separately.',
-      },
-      {
-        step: 'Installation',
-        body: 'Net is clipped or anchored taut along the full banister and hand-tested for give before we leave.',
-      },
-      {
-        step: 'Warranty & aftercare',
-        body: 'If a clip works loose or a section sags within warranty, we come back and re-fix free of charge.',
-      },
-    ],
-    faqs: [
-      {
-        q: 'Can this be fitted on a spiral staircase?',
-        a: 'Yes — we cut and fit net panels to the exact curve of your staircase.',
-      },
-      {
-        q: 'Will it look ugly on my staircase?',
-        a: 'Fine mesh in a matching colour is nearly invisible from a normal viewing distance — most visitors do not notice it.',
-      },
-      {
-        q: 'Can I remove it if I move out?',
-        a: 'Yes — clip-hook fixing unclips cleanly without marking the banister.',
-      },
-      {
-        q: 'Do you cover apartment common stairwells?',
-        a: 'Yes — open stairwell shafts in apartment buildings are one of the most common requests for this service.',
-      },
-    ],
-    relatedSlugs: ['safety-nets', 'invisible-grills', 'duct-area-nets'],
-    gallery: [
-      { src: '/gallery-new-2.webp', alt: 'gallery new 2' },
-      { src: '/gallery-new-4.webp', alt: 'gallery new 4' },
-      { src: '/gallery-new-5.webp', alt: 'gallery new 5' },
-      { src: '/gallery-new-7.webp', alt: 'gallery new 7' },
-    ],
-  },
-
-  // ── 8. Construction Nets ─────────────────────────────────────────────────
-  {
-    slug: 'construction-nets',
-    name: 'Construction Safety Nets',
-    shortName: 'Construction Nets',
-    category: 'Construction Nets',
-    metaTitle: 'Construction Safety Nets for Buildings & Sites | Chennai',
-    metaDescription:
-      'Heavy-duty debris and fall-arrest nets for construction sites, building facades and renovation work. Free survey — call +91 78100 40329.',
-    icon: HardHat,
-    heroTagline: 'What falls on a construction site should not land on someone below.',
-    intro: [
-      "Construction safety nets are a mandatory requirement on most building sites — they catch falling debris, tools and materials before they reach workers or pedestrians below. We supply and install heavy-duty knotted HDPE nets on building facades, scaffolding frames and open floor edges for new construction, renovation and demolition projects.",
-      "These are a different specification from residential safety nets — heavier mesh, higher breaking strength, and fitted to comply with construction site safety standards. We work with builders, contractors and housing societies doing major renovation work across Chennai and pan-India.",
-    ],
-    bestFor: [
-      'New construction buildings needing facade debris nets',
-      'Renovation and demolition projects with open floor edges',
-      'Housing societies doing external painting or waterproofing work',
-      'Contractors needing compliant fall-arrest netting for scaffolding',
-    ],
-    materials: [
-      { label: 'Net material', value: 'Heavy-duty knotted HDPE, high breaking strength' },
-      { label: 'Mesh size', value: '25mm–50mm depending on debris type and site requirement' },
-      { label: 'Fixing', value: 'Rope lashing to scaffolding or SS anchors into structure' },
-      { label: 'Standards', value: 'Fitted to construction site safety requirements' },
-      { label: 'Warranty', value: '2 years on net material, 1 year on installation' },
-    ],
-    benefits: [
-      {
-        title: 'Catches debris before it reaches ground level',
-        body: 'Heavy-duty mesh stops falling tools, bricks and material from reaching workers or pedestrians below the work zone.',
-      },
-      {
-        title: 'Covers full facade in one pass',
-        body: 'We net the entire building face or floor edge in a single scheduled visit — no piecemeal coverage that leaves gaps.',
-      },
-      {
-        title: 'Removable after project completion',
-        body: 'Nets are lashed rather than permanently fixed, so they come down cleanly when the project is done.',
-      },
-      {
-        title: 'Works alongside scaffolding',
-        body: 'Nets are fitted to existing scaffolding frames — no separate structure needed.',
-      },
-    ],
-    process: [
-      {
-        step: 'Site survey',
-        body: 'We assess the building height, scaffolding type and coverage area needed.',
-      },
-      {
-        step: 'Quote same day',
-        body: 'Priced per square metre of coverage, with access method and fixing type itemised.',
-      },
-      {
-        step: 'Installation',
-        body: 'Nets are lashed to scaffolding or anchored to the structure and tensioned across the full coverage area.',
-      },
-      {
-        step: 'Removal & aftercare',
-        body: 'We remove nets at project completion and can re-use them on your next site if needed.',
-      },
-    ],
-    faqs: [
-      {
-        q: 'Do you supply nets for ongoing construction projects?',
-        a: 'Yes — we work with builders and contractors for the full duration of a project, not just a one-time install.',
-      },
-      {
-        q: 'Can nets be fitted without scaffolding already in place?',
-        a: 'We can use rope access for some situations, but scaffolding is the standard base for construction nets.',
-      },
-      {
-        q: 'Do you cover renovation projects, not just new builds?',
-        a: 'Yes — external painting, waterproofing and facade repair are common requests for construction nets.',
-      },
-      {
-        q: 'How quickly can you mobilise for an urgent site requirement?',
-        a: 'For Chennai sites, we can usually survey and quote within 24 hours and start installation within 2–3 days.',
-      },
-    ],
-    relatedSlugs: ['duct-area-nets', 'sports-nets', 'safety-nets'],
-    gallery: [
-      { src: '/construction-nets-industrial-roof-net.webp', alt: 'construction nets industrial roof net' },
-      { src: '/construction-nets-industrial-shed-roof-net.webp', alt: 'construction nets industrial shed roof net' },
-      { src: '/construction-nets-scaffolding-green-net-facade.webp', alt: 'construction nets scaffolding green net facade' },
-      { src: '/construction-nets-warehouse-open-side-net.webp', alt: 'construction nets warehouse open side net' },
+      { src: '/pigeon-nets-balcony-net-city-view.webp', alt: 'pigeon nets balcony net city view' },
+      { src: '/gallery-new-6.webp', alt: 'gallery new 6' },
+      { src: '/pigeon-nets-ac-outdoor-unit-protection-net.webp', alt: 'pigeon nets ac outdoor unit protection net' },
+      { src: '/pigeon-nets-balcony-installation-greenery-view.webp', alt: 'pigeon nets balcony installation greenery view' },
+      { src: '/pigeon-nets-bird-blocked-by-window-net.webp', alt: 'pigeon nets bird blocked by window net' },
+      { src: '/pigeon-nets-building-window-nets-elevation.webp', alt: 'pigeon nets building window nets elevation' },
+      { src: '/pigeon-nets-pigeons-on-balcony-railing.webp', alt: 'pigeon nets pigeons on balcony railing' },
+      { src: '/apartment-pigeon-net-balcony.webp', alt: 'apartment pigeon net balcony' },
+      { src: '/balcony-pigeon-net-installation.webp', alt: 'balcony pigeon net installation' },
+      { src: '/balcony-pigeon-safety-net.webp', alt: 'balcony pigeon safety net' },
+      { src: '/corridor-pigeon-net-installation.webp', alt: 'corridor pigeon net installation' },
+      { src: '/invisible-grills-modern-balcony-city-skyline.webp', alt: 'invisible grills modern balcony city skyline' },
+      { src: '/modern-balcony-invisible-grill.webp', alt: 'modern balcony invisible grill' },
     ],
   },
 ]
@@ -842,5 +457,5 @@ export function getServiceBySlug(slug: string): Service | undefined {
 
 export const grillServices = services.filter((s) => s.category === 'Invisible Grills')
 export const netServices = services.filter(
-  (s) => s.category === 'Safety Nets' || s.category === 'Pigeon Nets' || s.category === 'Duct Area Nets' || s.category === 'Staircase Nets' || s.category === 'Construction Nets',
+  (s) => s.category === 'Safety Nets' || s.category === 'Bird Safety Nets',
 )
