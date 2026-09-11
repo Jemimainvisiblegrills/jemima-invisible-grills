@@ -150,9 +150,9 @@ export const services: Service[] = [
     ],
   },
 
-  // ── 2. Pigeon Nets ───────────────────────────────────────────────────────
+  // ── 2. Cloth Hangers ─────────────────────────────────────────────────────
   {
-    slug: 'pigeon-nets',
+    slug: 'cloth-hangers',
     name: 'Pigeon Nets',
     shortName: 'Pigeon Nets',
     category: 'Pigeon Nets',
@@ -351,9 +351,9 @@ export const services: Service[] = [
     ],
   },
 
-  // ── 4. Cloth Hangers ─────────────────────────────────────────────────────
+  // ── 4. Pigeon Nets ───────────────────────────────────────────────────────
   {
-    slug: 'cloth-hangers',
+    slug: 'pigeon-nets',
     name: 'Cloth Hangers',
     shortName: 'Cloth Hangers',
     category: 'Cloth Hangers',

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Clock, Layers, ShieldCheck, Truck, Award, Star, Check, X, ArrowRight } from 'lucide-react'
 import { motion, useReducedMotion } from 'motion/react'
 import { Seo } from '@/components/Seo'
@@ -180,55 +180,25 @@ const homeFaqs = [
 ]
 
 function ServiceSlideCard({ service: s }: { service: (typeof services)[0] }) {
-  const [idx, setIdx] = useState(0)
-  const imgs = s.gallery
-
-  useEffect(() => {
-    if (imgs.length < 2) return
-    const t = setInterval(() => setIdx((i) => (i + 1) % imgs.length), 3000)
-    return () => clearInterval(t)
-  }, [imgs.length])
-
   return (
     <Link
       to={`/services/${s.slug}`}
       className="group relative flex flex-col overflow-hidden rounded-2xl border border-steel/20 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/10"
     >
-      {/* sliding photos */}
-      <div className="relative aspect-[16/9] overflow-hidden bg-mist">
-        {imgs.map((img, i) => (
-          <img
-            key={img.src}
-            src={img.src}
-            alt={img.alt}
-            width={800}
-            height={450}
-            loading="lazy"
-            className={`absolute inset-0 size-full object-cover transition-opacity duration-700 ${
-              i === idx ? 'opacity-100' : 'opacity-0'
-            }`}
-          />
-        ))}
+      <div className="relative aspect-[4/3] overflow-hidden bg-mist">
+        <img
+          src={s.gallery[0].src}
+          alt={s.gallery[0].alt}
+          width={800}
+          height={600}
+          loading="lazy"
+          className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-navy-deep/10 to-transparent" />
-        {/* category badge */}
         <span className="absolute left-3 top-3 rounded-full bg-white/15 px-2.5 py-1 text-[11px] font-semibold text-white backdrop-blur-sm">
           {s.category}
         </span>
-        {/* dot indicators */}
-        {imgs.length > 1 && (
-          <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5">
-            {imgs.map((_, i) => (
-              <span
-                key={i}
-                className={`block rounded-full transition-all duration-300 ${
-                  i === idx ? 'w-4 h-1.5 bg-orange' : 'w-1.5 h-1.5 bg-white/50'
-                }`}
-              />
-            ))}
-          </div>
-        )}
       </div>
-      {/* text */}
       <div className="flex flex-1 items-start gap-4 p-5">
         <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-navy/8 transition-colors duration-300 group-hover:bg-orange">
           <s.icon className="size-5 text-navy transition-colors duration-300 group-hover:text-white" aria-hidden="true" />
@@ -242,6 +212,99 @@ function ServiceSlideCard({ service: s }: { service: (typeof services)[0] }) {
         </div>
       </div>
     </Link>
+  )
+}
+
+function ServicesCarousel() {
+  const [idx, setIdx] = useState(0)
+  const [visible, setVisible] = useState(3)
+  const dragging = useRef(false)
+  const dragStart = useRef(0)
+  const dragDelta = useRef(0)
+
+  useEffect(() => {
+    const update = () => setVisible(window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3)
+    update()
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
+
+  const maxIdx = Math.max(0, services.length - visible)
+  const safeIdx = Math.min(idx, maxIdx)
+  const prev = () => setIdx((i) => Math.max(0, i - 1))
+  const next = () => setIdx((i) => Math.min(maxIdx, i + 1))
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    dragging.current = true
+    dragStart.current = e.clientX
+    dragDelta.current = 0
+    ;(e.currentTarget as HTMLElement).setPointerCapture(e.pointerId)
+  }
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (!dragging.current) return
+    dragDelta.current = e.clientX - dragStart.current
+  }
+  const onPointerUp = () => {
+    if (!dragging.current) return
+    dragging.current = false
+    if (dragDelta.current < -50) next()
+    else if (dragDelta.current > 50) prev()
+  }
+
+  // Use CSS custom property for card width — avoids JS measurement on first render
+  // On mobile: 1 card = 100%, tablet: 2 = ~50%, desktop: 3 = ~33%
+  // translateX moves by (safeIdx * 1 card-width-including-gap)
+  const gapPx = 16
+  const cardPercent = visible === 1 ? 100 : visible === 2 ? `calc(50% - ${gapPx / 2}px)` : `calc(33.333% - ${(gapPx * 2) / 3}px)`
+
+  return (
+    <div className="relative lg:px-8">
+      <button onClick={prev} disabled={safeIdx === 0} aria-label="Previous services"
+        className="absolute -left-1 top-[45%] z-10 hidden -translate-y-1/2 size-10 items-center justify-center rounded-full border border-steel/20 bg-white shadow-md transition-all hover:border-orange/40 hover:shadow-lg disabled:opacity-30 lg:flex">
+        <ArrowRight className="size-4 rotate-180 text-navy-deep" />
+      </button>
+
+      <div className="overflow-hidden">
+        <div
+          className="flex cursor-grab active:cursor-grabbing select-none"
+          style={{
+            gap: `${gapPx}px`,
+            transition: 'transform 0.5s cubic-bezier(0.32,0.72,0,1)',
+            transform: `translateX(calc(-${safeIdx} * (${typeof cardPercent === 'number' ? cardPercent + '%' : cardPercent} + ${gapPx}px)))`,
+          }}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onPointerLeave={onPointerUp}
+        >
+          {services.map((s) => (
+            <div
+              key={s.slug}
+              style={{ flex: `0 0 ${typeof cardPercent === 'number' ? cardPercent + '%' : cardPercent}` }}
+            >
+              <ServiceSlideCard service={s} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <button onClick={next} disabled={safeIdx >= maxIdx} aria-label="Next services"
+        className="absolute -right-1 top-[45%] z-10 hidden -translate-y-1/2 size-10 items-center justify-center rounded-full border border-steel/20 bg-white shadow-md transition-all hover:border-orange/40 hover:shadow-lg disabled:opacity-30 lg:flex">
+        <ArrowRight className="size-4 text-navy-deep" />
+      </button>
+
+      {maxIdx > 0 && (
+        <div className="mt-6 flex justify-center gap-2">
+          {Array.from({ length: maxIdx + 1 }).map((_, i) => (
+            <button key={i} onClick={() => setIdx(i)} aria-label={`Slide ${i + 1}`}
+              className={`rounded-full transition-all duration-300 ${
+                i === safeIdx ? 'w-5 h-2 bg-orange' : 'size-2 bg-steel/30 hover:bg-steel/60'
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -290,13 +353,7 @@ export function Home() {
             View all services <ArrowRight className="size-4" />
           </Link>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
-            <Reveal key={s.slug} delay={(i % 3) * 0.07}>
-              <ServiceSlideCard service={s} />
-            </Reveal>
-          ))}
-        </div>
+        <ServicesCarousel />
       </section>
 
       {/* ── Pricing ─────────────────────────────────────────────────────── */}
