@@ -1,6 +1,5 @@
 import { Phone, MessageCircle } from 'lucide-react'
-import { phoneHref, whatsappHref } from '@/lib/constants'
-import { CableRule } from '@/components/CableRule'
+import { phoneHref, whatsappHref, BUSINESS } from '@/lib/constants'
 
 type CtaBandProps = {
   title?: string
@@ -8,40 +7,38 @@ type CtaBandProps = {
 }
 
 export function CtaBand({
-  title = 'Get a free site survey',
-  subtitle = 'Tell us your balcony or window size on WhatsApp and get a quote the same day.',
+  title = 'Secure Your Balcony Today',
+  subtitle = `Call our Chennai technical team today for a free on-site estimate and laser measurement. Protect your loved ones with Chennai's most trusted safety experts.`,
 }: CtaBandProps) {
   return (
     <section
       aria-labelledby="cta-heading"
-      className="relative overflow-hidden bg-navy-deep py-14 text-white sm:py-16"
+      className="bg-navy-deep py-16 text-white sm:py-20"
     >
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <CableRule lines={48} height="100%" color="rgba(255,255,255,0.08)" />
-      </div>
-      <div className="container-page relative flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <h2
-            id="cta-heading"
-            className="font-display text-2xl font-extrabold tracking-tight uppercase sm:text-3xl"
+      <div className="container-page text-center">
+        <h2
+          id="cta-heading"
+          className="font-display text-2xl font-bold sm:text-3xl"
+        >
+          {title}
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-white/60">{subtitle}</p>
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <a
+            href={phoneHref}
+            className="flex items-center gap-2 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-light"
           >
-            {title}
-          </h2>
-          <p className="mt-2 max-w-xl text-white/70">{subtitle}</p>
-        </div>
-        <div className="flex flex-wrap gap-4">
-          <a href={phoneHref} className="btn-outline border-white text-white hover:bg-white hover:text-navy-deep px-6 py-3.5">
-            <Phone className="size-5" aria-hidden="true" />
-            Call now
+            <Phone className="size-4" aria-hidden="true" />
+            Call Now: {BUSINESS.phoneDisplay}
           </a>
           <a
             href={whatsappHref}
             target="_blank"
             rel="noreferrer"
-            className="btn-primary px-6 py-3.5"
+            className="flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#20bd5a]"
           >
-            <MessageCircle className="size-5" aria-hidden="true" />
-            WhatsApp quote
+            <MessageCircle className="size-4" aria-hidden="true" />
+            WhatsApp Us
           </a>
         </div>
       </div>

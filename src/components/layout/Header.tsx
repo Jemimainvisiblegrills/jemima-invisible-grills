@@ -7,8 +7,7 @@ import { phoneHref, BUSINESS } from '@/lib/constants'
 
 const navLinks = [
   { to: '/about', label: 'About' },
-  { to: '/gallery', label: 'Gallery' },
-  { to: '/service-areas', label: 'Service Areas' },
+  { to: '/service-areas', label: 'Why Us' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -152,17 +151,11 @@ export function Header() {
           <div className="hidden items-center gap-3 lg:flex">
             <a
               href={phoneHref}
-              className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium text-navy-deep/80 transition-colors hover:bg-black/[0.04] hover:text-navy-deep"
+              className="flex items-center gap-2 rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-orange-light hover:-translate-y-0.5"
             >
-              <Phone className="size-3.5" aria-hidden="true" />
-              {BUSINESS.phoneDisplay}
+              <Phone className="size-4" aria-hidden="true" />
+              Call Now
             </a>
-            <Link
-              to="/contact"
-              className="rounded-xl bg-orange px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-orange/30 transition-all hover:bg-orange-light hover:-translate-y-0.5"
-            >
-              Get free quote
-            </Link>
           </div>
 
           {/* Hamburger */}
