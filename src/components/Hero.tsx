@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { Phone, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react'
+import { MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react'
 import { motion, AnimatePresence, useReducedMotion, useMotionValue, useTransform, animate } from 'motion/react'
 import { Link } from 'react-router-dom'
-import { phoneHref, whatsappHref } from '@/lib/constants'
+import { whatsappHref } from '@/lib/constants'
 
 const heroSlides = [
   {
