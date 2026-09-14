@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
 import {
   Phone, MessageCircle, CheckCircle2, ChevronRight,
-  ShieldCheck, Clock, Truck, Award, Star, Wrench,
+  ShieldCheck, Clock, Truck, Award, Star, Wrench, ArrowRight,
 } from 'lucide-react'
 import { motion, useReducedMotion } from 'motion/react'
 import { Seo } from '@/components/Seo'
@@ -14,7 +14,7 @@ import { EnquiryForm } from '@/components/EnquiryForm'
 import { Lightbox } from '@/components/Lightbox'
 import { ServiceCard } from '@/components/ServiceCard'
 import { Reveal } from '@/components/Reveal'
-import { getServiceBySlug } from '@/data/services'
+import { getServiceBySlug, services } from '@/data/services'
 import { phoneHref, BUSINESS } from '@/lib/constants'
 import { buildFaqSchema, buildBreadcrumbSchema } from '@/lib/seo-schema'
 
@@ -39,6 +39,12 @@ export function ServiceDetail() {
   const relatedServices = service.relatedSlugs
     .map((s) => getServiceBySlug(s))
     .filter((s): s is NonNullable<typeof s> => Boolean(s))
+  
+  // Get sub-services for Bird Safety Nets (duct-area-nets, house-covering-nets)
+  const subServices = service.slug === 'pigeon-nets' 
+    ? services.filter(s => s.slug === 'duct-area-nets' || s.slug === 'house-covering-nets')
+    : []
+  
   const whatsappUrl = `https://wa.me/${BUSINESS.whatsappNumber}`
 
   return (
@@ -208,6 +214,43 @@ export function ServiceDetail() {
               ))}
             </div>
           </section>
+
+          {/* Sub-services for Bird Safety Nets */}
+          {subServices.length > 0 && (
+            <section aria-labelledby="sub-services-heading">
+              <SectionTitle id="sub-services-heading" eyebrow="Also available" title="Specialized Bird Net Solutions" className="mb-8" />
+              <div className="grid gap-5 sm:grid-cols-2">
+                {subServices.map((sub, i) => (
+                  <Reveal key={sub.slug} delay={i * 0.1}>
+                    <Link
+                      to={`/services/${sub.slug}`}
+                      className="group flex flex-col overflow-hidden rounded-2xl border border-steel/20 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-orange/30"
+                    >
+                      <div className="aspect-[16/9] overflow-hidden">
+                        <img
+                          src={sub.gallery[0]?.src}
+                          alt={sub.gallery[0]?.alt}
+                          className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                      <div className="p-5">
+                        <div className="flex items-center gap-2 mb-2">
+                          <sub.icon className="size-5 text-orange" />
+                          <h3 className="font-display text-lg font-bold text-navy-deep group-hover:text-orange transition-colors">
+                            {sub.name}
+                          </h3>
+                        </div>
+                        <p className="text-sm text-navy-deep/65 line-clamp-2">{sub.heroTagline}</p>
+                        <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-orange">
+                          Learn more <ArrowRight className="size-4" />
+                        </span>
+                      </div>
+                    </Link>
+                  </Reveal>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Why you need it — icon cards */}
           <section aria-labelledby="why-heading">

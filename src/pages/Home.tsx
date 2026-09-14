@@ -9,6 +9,9 @@ import { SectionTitle } from '@/components/SectionTitle'
 import { services } from '@/data/services'
 import { BUSINESS, whatsappHref } from '@/lib/constants'
 
+// Filter out sub-services (duct-area-nets, house-covering-nets) from main services list
+const mainServices = services.filter(s => s.slug !== 'duct-area-nets' && s.slug !== 'house-covering-nets')
+
 const coreServices = [
   {
     title: 'High-Tensile Invisible Grills',
@@ -98,7 +101,7 @@ export function Home() {
             <p className="mt-3 text-navy-deep/60">Chennai's trusted solutions for safety, hygiene & convenience</p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((s, i) => (
+            {mainServices.map((s, i) => (
               <Reveal key={s.slug} delay={i * 0.08}>
                 <ServiceCard service={s} />
               </Reveal>
