@@ -3,6 +3,8 @@ import {
   Bird,
   ShieldCheck,
   Shirt,
+  Home,
+  Wind,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -447,6 +449,192 @@ export const services: Service[] = [
       { src: '/corridor-pigeon-net-installation.webp', alt: 'corridor pigeon net installation' },
       { src: '/invisible-grills-modern-balcony-city-skyline.webp', alt: 'invisible grills modern balcony city skyline' },
       { src: '/modern-balcony-invisible-grill.webp', alt: 'modern balcony invisible grill' },
+    ],
+  },
+
+  // ── 5. Duct Area Nets ────────────────────────────────────────────────────
+  {
+    slug: 'duct-area-nets',
+    name: 'Duct Area Nets',
+    shortName: 'Duct Area Nets',
+    category: 'Bird Safety Nets',
+    metaTitle: 'Duct Area Safety Nets in Chennai | Jemima',
+    metaDescription:
+      'Duct area pigeon nets for apartments and buildings. Stop birds from nesting in AC ducts, ventilation shafts. Free survey — call +91 78100 40329.',
+    icon: Wind,
+    heroTagline: 'Keep ducts clean. Block birds permanently.',
+    intro: [
+      'Duct areas in apartment buildings are prime nesting spots for pigeons — dark, sheltered, and rarely disturbed. Once birds settle in, droppings pile up, feathers clog ventilation, and the smell travels through the entire shaft. A duct area net seals the opening completely while still allowing airflow.',
+      'We install heavy-duty HDPE nets across duct openings at every floor level, anchored with stainless steel hooks into the concrete frame. The mesh is fine enough to block pigeons and sparrows, UV-stabilised to last years in direct sunlight, and tensioned so it stays taut even in high wind.',
+    ],
+    bestFor: [
+      'Apartment buildings with open duct shafts where pigeons nest',
+      'AC duct areas that accumulate bird droppings and feathers',
+      'Ventilation shafts that need bird-proofing without blocking airflow',
+      'Building societies looking to cover all duct openings in one project',
+    ],
+    materials: [
+      { label: 'Mesh material', value: 'UV-stabilised HDPE, knotted, 1.5″ × 1.5″ spacing' },
+      { label: 'Frame support', value: 'GI or SS frame for large openings, direct hook fixing for smaller ducts' },
+      { label: 'Fixing hooks', value: 'Stainless steel L-hooks / eye bolts, corrosion-resistant' },
+      { label: 'Airflow', value: 'Mesh allows full ventilation — no reduction in duct airflow' },
+      { label: 'Warranty', value: '5 years against UV degradation, 1 year on installation' },
+    ],
+    benefits: [
+      {
+        title: 'Stops nesting at the source',
+        body: 'Duct areas are where pigeons actually live — blocking balconies alone just moves them here. Cover the duct and they leave the building.',
+      },
+      {
+        title: 'Improves building hygiene',
+        body: 'No more droppings falling through the shaft, no feathers in the ventilation, no smell circulating through floors.',
+      },
+      {
+        title: 'Maintains full airflow',
+        body: 'The 1.5-inch mesh blocks birds but not air — your duct ventilation works exactly as designed.',
+      },
+      {
+        title: 'One-time fix for the whole building',
+        body: 'We can cover duct openings on every floor in a single project — coordinate once, solve it permanently.',
+      },
+    ],
+    process: [
+      {
+        step: 'Site survey',
+        body: 'We inspect all duct openings, measure dimensions, and check access for installation — scaffolding or rope access if needed.',
+      },
+      {
+        step: 'Quote same day',
+        body: 'Priced per square foot, with access costs (if any) shown separately. Bulk discount for full-building projects.',
+      },
+      {
+        step: 'Installation',
+        body: 'Hooks are fixed into the duct frame, net is stretched and secured. We clear existing nests before fitting.',
+      },
+      {
+        step: 'Warranty & aftercare',
+        body: 'If any section loosens or a hook fails within warranty, we re-fix at no charge.',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can you cover duct areas on all floors at once?',
+        a: 'Yes — for apartment societies we typically do the entire building in one project, floor by floor.',
+      },
+      {
+        q: 'Will the net block ventilation?',
+        a: 'No. The mesh is open enough for full airflow — it only blocks birds, not air.',
+      },
+      {
+        q: 'What about existing nests and droppings?',
+        a: 'We clear nests and debris before installing. For heavy accumulation, we recommend a cleaning service first.',
+      },
+      {
+        q: 'How do you access upper-floor duct areas?',
+        a: 'Rope access or scaffolding depending on the building. Access cost is quoted separately if needed.',
+      },
+    ],
+    relatedSlugs: ['pigeon-nets', 'house-covering-nets', 'safety-nets'],
+    gallery: [
+      { src: '/pigeon-nets-ac-outdoor-unit-protection-net.webp', alt: 'duct area net installation' },
+      { src: '/corridor-pigeon-net-installation.webp', alt: 'corridor duct net' },
+      { src: '/pigeon-nets-building-window-nets-elevation.webp', alt: 'building duct nets' },
+      { src: '/pigeon-nets-balcony-installation-greenery-view.webp', alt: 'duct area pigeon net' },
+      { src: '/apartment-pigeon-net-balcony.webp', alt: 'apartment duct net' },
+      { src: '/balcony-pigeon-net-installation.webp', alt: 'duct net installation' },
+    ],
+  },
+
+  // ── 6. House Covering Nets ───────────────────────────────────────────────
+  {
+    slug: 'house-covering-nets',
+    name: 'House Covering Nets',
+    shortName: 'House Covering',
+    category: 'Bird Safety Nets',
+    metaTitle: 'House Covering Safety Nets in Chennai | Jemima',
+    metaDescription:
+      'Full house covering nets for villas and independent houses. Complete bird protection for terraces, open areas. Free survey — call +91 78100 40329.',
+    icon: Home,
+    heroTagline: 'Cover your entire terrace. Keep birds out completely.',
+    intro: [
+      'For independent houses and villas with open terraces, a full house covering net is the only way to completely bird-proof the property. We install large-span HDPE nets across the entire terrace or open courtyard, supported by a GI pipe frame or tensioned cable system.',
+      'This is the solution when balcony-by-balcony netting isn\'t enough — when pigeons are landing on your terrace, nesting in corners, and making the whole outdoor space unusable. One covering net turns your terrace back into a clean, usable area.',
+    ],
+    bestFor: [
+      'Independent houses and villas with open terraces',
+      'Properties with large courtyards or open-to-sky areas',
+      'Homes where pigeons have taken over the terrace completely',
+      'Terrace gardens that need bird protection without blocking sunlight',
+    ],
+    materials: [
+      { label: 'Mesh material', value: 'UV-stabilised HDPE, knotted, 1.5″ or 2″ spacing' },
+      { label: 'Support frame', value: 'GI pipe frame or SS tensioned cable system' },
+      { label: 'Span capacity', value: 'Up to 40 ft spans with intermediate supports' },
+      { label: 'Load rating', value: 'Handles rain accumulation and moderate wind load' },
+      { label: 'Warranty', value: '5 years on net, 3 years on frame, 1 year on installation' },
+    ],
+    benefits: [
+      {
+        title: 'Complete coverage in one installation',
+        body: 'Instead of netting each opening separately, one covering net protects the entire terrace or courtyard.',
+      },
+      {
+        title: 'Terrace becomes usable again',
+        body: 'No more droppings, no more nesting — you can use your terrace for drying clothes, sitting, or gardening.',
+      },
+      {
+        title: 'Sunlight and rain pass through',
+        body: 'The mesh blocks birds but not weather — your terrace garden still gets full sun and rainwater.',
+      },
+      {
+        title: 'Durable frame for large spans',
+        body: 'GI pipe or cable frame handles the tension across large areas without sagging or flapping.',
+      },
+    ],
+    process: [
+      {
+        step: 'Site survey',
+        body: 'We measure the terrace, check parapet heights, and plan the frame layout — GI pipe or cable depending on span and budget.',
+      },
+      {
+        step: 'Quote same day',
+        body: 'Priced per square foot including frame. We show net cost and frame cost separately so you see the breakdown.',
+      },
+      {
+        step: 'Installation',
+        body: 'Frame is installed first (1–2 days for large terraces), then net is stretched and secured. Full project typically 2–4 days.',
+      },
+      {
+        step: 'Warranty & aftercare',
+        body: 'Frame and net are separately warrantied. Any sagging or loosening within warranty is fixed free.',
+      },
+    ],
+    faqs: [
+      {
+        q: 'How large an area can you cover?',
+        a: 'We\'ve covered terraces up to 2,000 sq ft in single projects. Larger areas need intermediate frame supports.',
+      },
+      {
+        q: 'Will the net sag in the middle?',
+        a: 'Not with proper frame design. We add intermediate supports for spans over 15–20 ft to prevent sagging.',
+      },
+      {
+        q: 'Can I still access the terrace for tank cleaning etc?',
+        a: 'Yes — we include a zippered or hinged access panel wherever you need it.',
+      },
+      {
+        q: 'Does the frame damage the parapet or walls?',
+        a: 'Minimal drilling into the parapet top. We avoid waterproofing layers and seal all fixing points.',
+      },
+    ],
+    relatedSlugs: ['pigeon-nets', 'duct-area-nets', 'safety-nets'],
+    gallery: [
+      { src: '/pigeon-nets-building-window-nets-elevation.webp', alt: 'house covering net' },
+      { src: '/pigeon-nets-balcony-net-city-view.webp', alt: 'terrace covering net' },
+      { src: '/safety-nets-balcony-net-hillside-view.webp', alt: 'villa covering net' },
+      { src: '/pigeon-nets-apartment-balcony-city-view.webp', alt: 'full house net' },
+      { src: '/apartment-pigeon-safety-net.webp', alt: 'terrace bird net' },
+      { src: '/balcony-pigeon-safety-net.webp', alt: 'house net installation' },
     ],
   },
 ]
